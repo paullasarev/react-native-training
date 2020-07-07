@@ -1,0 +1,79 @@
+{
+  "name": "reactNativeTraining",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --fix --ext .js,.jsx,.ts,.tsx",
+    "lint:circular": "npx madge --circular --extensions js,ts,tsx ./src"
+  },
+  "dependencies": {
+    "react": "16.11.0",
+    "react-native": "0.62.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "@react-native-community/async-storage": "^1.11.0",
+    "@react-native-community/eslint-config": "^1.0.0",
+    "@types/jest": "^24.9.1",
+    "@types/react-native": "^0.62.0",
+    "@types/react-test-renderer": "16.9.2",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.5.1",
+    "husky": "^4.2.5",
+    "jest": "^24.9.0",
+    "jest-junit": "^11.0.1",
+    "lint-staged": "^10.2.11",
+    "madge": "^3.9.2",
+    "metro-react-native-babel-preset": "^0.58.0",
+    "prettier": "^2.0.4",
+    "react-native-localize": "^1.4.0",
+    "react-test-renderer": "16.11.0",
+    "typescript": "^3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && lint-staged",
+      "pre-push": "npm run lint:circular && npm test"
+    }
+  },
+  "lint-staged": {
+    "*.(ts|tsx)": [
+      "eslint"
+    ]
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "testMatch": [ "**/?(*.)+(spec|test).[jt]s?(x)" ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|@react-native-community|react-navigation|react-navigation-tabs|react-navigation-stack|@react-navigation/.*|react-native-svg)"
+    ],
+    "setupFiles": [
+      "./jest.setup.js"
+    ],
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
+    "coverageReporters": [
+      "text",
+      "cobertura"
+    ]
+  }
+}
