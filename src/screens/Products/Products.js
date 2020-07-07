@@ -1,18 +1,22 @@
 import React from 'react';
-import {View, FlatList} from 'react-native';
+import { View, FlatList } from 'react-native';
+
 import ProductGridItem from '../../components/ProductGridItem';
-import {PRODUCTS} from '../../mock';
-import {MAIN_ROUTES} from '../../constants/routes';
+import { PRODUCTS } from '../../mock';
+import { MAIN_ROUTES } from '../../constants/routes';
 import navigation from '../../navigation';
 import style from './style';
 
+const getItemSeparatorComponent = () => <View style={style.separator} />;
+const keyExtractor = (product) => product.name;
+
 const Products = () => {
-  const renderItem = ({item: product}) => {
+  const renderItem = ({ item: product }) => {
     return <ProductGridItem product={product} onPress={onItemPress} />;
   };
 
   const onItemPress = (item) => {
-    navigation.go(MAIN_ROUTES.PRODUCT, {product: item});
+    navigation.go(MAIN_ROUTES.PRODUCT, { product: item });
   };
 
   return (
@@ -22,8 +26,8 @@ const Products = () => {
         contentContainerStyle={style.list}
         data={PRODUCTS}
         renderItem={renderItem}
-        ItemSeparatorComponent={() => <View style={style.separator} />}
-        keyExtractor={(product) => product.name}
+        ItemSeparatorComponent={getItemSeparatorComponent}
+        keyExtractor={keyExtractor}
       />
     </View>
   );

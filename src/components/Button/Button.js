@@ -1,10 +1,10 @@
 import React from 'react';
-import {TouchableOpacity, ActivityIndicator} from 'react-native';
+import { TouchableOpacity, ActivityIndicator } from 'react-native';
 import Text from '../Text';
 import style from './style';
 
 const Button = (props) => {
-  const {title, loading} = props;
+  const { title, loading } = props;
   const onPress = () => {
     if (loading) {
       return null;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Switch} from 'react-native';
+import { View, Switch } from 'react-native';
 import Text from '../Text';
 import style from './style';
 

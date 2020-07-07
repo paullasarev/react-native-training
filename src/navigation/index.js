@@ -1,4 +1,4 @@
-import {CommonActions} from '@react-navigation/native';
+import { CommonActions } from '@react-navigation/native';
 
 class Navigation {
   init = (ref) => {

@@ -1,8 +1,8 @@
 import React from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import CartScreen from '../screens/Cart';
+import { HOME_ROUTES } from '../constants/routes';
 import ShopNavigator from './ShopNavigator';
-import {HOME_ROUTES} from '../constants/routes';
 
 const Tab = createBottomTabNavigator();
 

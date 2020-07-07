@@ -1,8 +1,8 @@
 import React from 'react';
-import {createDrawerNavigator} from '@react-navigation/drawer';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import SettingsScreen from '../screens/Settings';
+import { DRAWER_ROUTES } from '../constants/routes';
 import HomeNavigator from './HomeNavigator';
-import {DRAWER_ROUTES} from '../constants/routes';
 
 const Drawer = createDrawerNavigator();
 

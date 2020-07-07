@@ -1,14 +1,10 @@
-import React, {useState} from 'react';
-import {View, SafeAreaView} from 'react-native';
+import React, { useState } from 'react';
+import { View, SafeAreaView } from 'react-native';
 import Text from '../../components/Text';
 import Checkbox from '../../components/Checkbox';
 import style from './style';
 
-const CHECKBOXES = [
-  'Allow recommendations',
-  'Turn on notifications',
-  'Cache images',
-];
+const CHECKBOXES = ['Allow recommendations', 'Turn on notifications', 'Cache images'];
 
 const Settings = () => {
   const [state, setState] = useState({
@@ -19,7 +15,7 @@ const Settings = () => {
     CHECKBOXES.map((text, index) => {
       const onValueChange = (value) => {
         setState({
-          checkboxes: {...state.checkboxes, [index]: value},
+          checkboxes: { ...state.checkboxes, [index]: value },
         });
       };
 

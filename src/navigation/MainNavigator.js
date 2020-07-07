@@ -1,9 +1,9 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
-import DrawerNavigator from './DrawerNavigator';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import Product from '../screens/Product';
-import {MAIN_ROUTES} from '../constants/routes';
+import { MAIN_ROUTES } from '../constants/routes';
+import DrawerNavigator from './DrawerNavigator';
 
 const Stack = createStackNavigator();
 
@@ -14,7 +14,8 @@ export default React.forwardRef((props, ref) => {
         initialRouteName={MAIN_ROUTES.DRAWER}
         screenOptions={{
           headerBackTitle: 'Back',
-        }}>
+        }}
+      >
         <Stack.Screen
           name={MAIN_ROUTES.DRAWER}
           component={DrawerNavigator}

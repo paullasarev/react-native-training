@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image} from 'react-native';
+import { Image } from 'react-native';
 
 const style = {
   height: 150,
@@ -7,12 +7,12 @@ const style = {
 };
 
 const ProductImage = (props) => {
-  const {image} = props.product;
+  const { image } = props.product;
 
   return (
     <Image
       style={style}
-      source={typeof image === 'string' ? {url: image} : image}
+      source={typeof image === 'string' ? { url: image } : image}
       resizeMode="contain"
     />
   );

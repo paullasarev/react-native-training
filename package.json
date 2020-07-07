@@ -13,14 +13,22 @@
     "lint:circular": "npx madge --circular --extensions js,ts,tsx ./src"
   },
   "dependencies": {
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/bottom-tabs": "^5.6.1",
+    "@react-navigation/drawer": "^5.8.4",
+    "@react-navigation/native": "^5.6.1",
+    "@react-navigation/stack": "^5.6.2",
     "react": "16.11.0",
-    "react-native": "0.62.2"
+    "react-native": "0.62.2",
+    "react-native-reanimated": "^1.9.0",
+    "react-native-screens": "^2.9.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/runtime": "^7.6.2",
     "@react-native-community/async-storage": "^1.11.0",
-    "@react-native-community/eslint-config": "^1.0.0",
+    "@react-native-community/eslint-config": "^1.1.0",
+    "@react-native-community/eslint-plugin": "^1.1.0",
     "@types/jest": "^24.9.1",
     "@types/react-native": "^0.62.0",
     "@types/react-test-renderer": "16.9.2",
@@ -28,6 +36,8 @@
     "@typescript-eslint/parser": "^2.27.0",
     "babel-jest": "^24.9.0",
     "eslint": "^6.5.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-redux-complexity": "git+https://github.com/paullasarev/eslint-plugin-redux-complexity.git",
     "husky": "^4.2.5",
     "jest": "^24.9.0",
     "jest-junit": "^11.0.1",
@@ -35,6 +45,8 @@
     "madge": "^3.9.2",
     "metro-react-native-babel-preset": "^0.58.0",
     "prettier": "^2.0.4",
+    "pretty-quick": "^2.0.1",
+    "react-native-gesture-handler": "^1.6.1",
     "react-native-localize": "^1.4.0",
     "react-test-renderer": "16.11.0",
     "typescript": "^3.8.3"
@@ -60,7 +72,10 @@
       "json",
       "node"
     ],
-    "testMatch": [ "**/?(*.)+(spec|test).[jt]s?(x)" ],
+    "rootDir": "./",
+    "testMatch": [
+      "**/?(*.)+(spec|test).[jt]s?(x)"
+    ],
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|@react-native-community|react-navigation|react-navigation-tabs|react-navigation-stack|@react-navigation/.*|react-native-svg)"
     ],
