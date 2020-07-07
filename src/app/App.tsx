@@ -1,16 +1,14 @@
 import React from 'react';
 import 'react-native-gesture-handler';
-// import { Text, View } from 'react-native';
 import MainNavigator from '../navigation/MainNavigator';
 import navigation from '../navigation';
 
+if (__DEV__) {
+  // eslint-disable-next-line no-console
+  import('./ReactotronConfig').then(() => console.log('Reactotron Configured'));
+}
+
 const App = () => {
-  // return <MainNavigator />;
-  // return (
-  //   <View>
-  //     <Text>app</Text>
-  //   </View>
-  // );
   return <MainNavigator ref={navigation.init} />;
 };
 
