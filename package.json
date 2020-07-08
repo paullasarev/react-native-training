@@ -60,6 +60,7 @@
     "react-redux": "^7.2.0",
     "react-test-renderer": "16.11.0",
     "reactotron-react-native": "^5.0.0",
+    "reactotron-redux": "^3.1.3",
     "redux": "^4.0.5",
     "redux-effects-middleware": "git+https://github.com/paullasarev/redux-effects-middleware.git",
     "redux-fetch-requests": "git+https://github.com/paullasarev/redux-fetch-requests.git",

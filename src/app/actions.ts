@@ -15,4 +15,15 @@ export function routeGoAction(route: string, params?: object): RouteGoAction {
   };
 }
 
-export type AppAction = RouteGoAction;
+export const ROUTE_BACK = 'ROUTE_BACK';
+export interface RouteGoBackAction extends Action {
+  type: typeof ROUTE_BACK;
+}
+
+export function routeGoBackAction(): RouteGoBackAction {
+  return {
+    type: ROUTE_BACK,
+  };
+}
+
+export type AppAction = RouteGoAction | RouteGoBackAction;

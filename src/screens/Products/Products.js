@@ -2,7 +2,6 @@ import React, { useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import { View, FlatList } from 'react-native';
 
-// import { go } from '../../navigation/Navigation';
 import ProductGridItem from '../../components/ProductGridItem';
 import { PRODUCTS } from '../../mock';
 import { MAIN_ROUTES } from '../../constants/routes';
@@ -17,8 +16,6 @@ const Products = () => {
 
   const onItemPress = useCallback(
     (item) => {
-      // go(MAIN_ROUTES.PRODUCT, { product: item });
-      console.log('dispatch', MAIN_ROUTES.PRODUCT);
       dispatch(routeGoAction(MAIN_ROUTES.PRODUCT, { product: item }));
     },
     [dispatch],

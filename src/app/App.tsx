@@ -12,6 +12,9 @@ if (__DEV__) {
   import('./ReactotronConfig').then(() => console.log('Reactotron Configured'));
 }
 
+// eslint-disable-next-line no-console
+console.disableYellowBox = true;
+
 const { store } = configureStore();
 
 const App = () => {
